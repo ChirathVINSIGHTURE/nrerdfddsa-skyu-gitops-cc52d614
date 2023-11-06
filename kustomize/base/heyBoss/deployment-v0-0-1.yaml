@@ -1,0 +1,15 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: heyboss
+  labels:
+    app: heyboss
+    application-id: app_47a2f0d6-b36c-401d-b70d-458040c6f5e9
+spec:
+  selector:
+    matchLabels:
+      app: heyboss
+  template:
+    metadata:
+      labels:
+        app: heyboss

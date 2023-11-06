@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations: {}
+  labels:
+    app: heyboss
+    application-id: app_47a2f0d6-b36c-401d-b70d-458040c6f5e9
+  name: heyboss
+spec:
+  selector:
+    app: heyboss
