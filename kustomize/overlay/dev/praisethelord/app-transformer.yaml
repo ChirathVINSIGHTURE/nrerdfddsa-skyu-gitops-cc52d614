@@ -29,7 +29,7 @@ spec:
   labels:
     app: praisethelord
     env: production
-    applicationId: app_7b4120d8-458d-46c4-b2de-42b67f1bca3e
+    applicationId: app_1db83000-2c04-4a3a-9df9-295f8d3e798c
     projectId: project_bd80e2c3-4c18-4dfc-8b33-2c3ebd824c50
     organizationId: org_e6d69564-e5ec-4b6c-b23c-e72de3fdc902
     environmentId: env_2c8308a9-7cbe-4d8f-bb7a-ab10824cc0a1
