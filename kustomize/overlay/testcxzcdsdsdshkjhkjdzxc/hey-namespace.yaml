@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: hey
+  labels:
+    environment-id: env_e6e69762-1635-4785-9a5b-3dff2b953190
+    project-id: project_bd80e2c3-4c18-4dfc-8b33-2c3ebd824c50
+    project-name: axcdtgfbv
+    environment-name: testcxzcdsdsdshkjhkjdzxc
+    organization-id: org_e6d69564-e5ec-4b6c-b23c-e72de3fdc902
