@@ -1,0 +1,15 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ross
+  labels:
+    app: ross
+    application-id: app_72da35da-f078-41a1-ad4c-f5bb459ef583
+spec:
+  selector:
+    matchLabels:
+      app: ross
+  template:
+    metadata:
+      labels:
+        app: ross
