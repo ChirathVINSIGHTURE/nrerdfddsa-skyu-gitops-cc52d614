@@ -1,0 +1,16 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rs
+  labels:
+    app: rs
+    applicationId: app_64bee616-8230-41af-8322-35c893b192ad
+    version: v0.0.1
+spec:
+  selector:
+    matchLabels:
+      app: rs
+  template:
+    metadata:
+      labels:
+        app: rs

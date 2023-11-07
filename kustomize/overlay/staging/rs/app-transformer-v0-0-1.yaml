@@ -1,0 +1,49 @@
+apiVersion: transformers.customplugin.co/v1
+kind: SkyUAppTransformer
+metadata:
+  name: skyu-deployment
+  annotations:
+    config.kubernetes.io/function: |
+      exec:
+        path: skyu-app-transformer
+spec:
+  applicationContainers:
+    - imageTag: latest
+      cpuRequestMili: 100
+      cpuLimitMili: 200
+      memoryRequestMb: 100
+      memoryLimitMb: 200
+      args: []
+      command: []
+      configMounts: []
+      applicationPorts: []
+      healthChecks: []
+      name: mist-main
+  minReplicas: 1
+  maxReplicas: 5
+  terminationGracePeriodSeconds: 30
+  nodeSelector:
+    kubernetes.io/hostname: my-node-name
+  suspend: false
+  ttlSecondsAfterFinished: 0
+  labels:
+    app: rs
+    env: production
+    version: v0.0.1
+    applicationId: app_64bee616-8230-41af-8322-35c893b192ad
+    projectId: project_bd80e2c3-4c18-4dfc-8b33-2c3ebd824c50
+    organizationId: org_e6d69564-e5ec-4b6c-b23c-e72de3fdc902
+    environmentId: env_7d44a198-a6e4-4bdc-a208-da5444a1701c
+    environmentName: staging
+  horizontalAutoScalingRules:
+    - ruleType: cpu
+      percentage: 80
+  volumes:
+    - name: my-volume
+      type: PersistentVolumeClaim
+      pvc:
+        claimName: my-claim
+  type: service
+  serviceType: LoadBalancer
+  name: mist
+  namespace: asdasdasd-staging
